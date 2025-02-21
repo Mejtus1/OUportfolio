@@ -1,0 +1,16 @@
+<account>
+  <accountHolder>
+    <firstName>Joseph</firstName>
+    <lastName>Steiner</lastName>
+  </accountHolder>
+  <bank>
+    <bankName>UCL Bank London</bankName>
+    <branch>Downtown 81</branch>
+  </bank>
+  <accountDetails>
+    <accountNumber>9876543210</accountNumber>
+    <accountType>Checking</accountType>
+    <balance>2500</balance>
+    <currency>USD</currency>
+  </accountDetails>
+</account>
