@@ -1,0 +1,82 @@
+Secure SSH connection 
+
+C:\>telnet 10.10.10.2
+Trying 10.10.10.2 ...Open
+
+
+User Access Verification
+
+Password: 
+S1>enable
+Password: 
+S1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+S1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#service password-encryption
+S1(config)#exit
+S1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#ip domain-name netacad.pka
+S1(config)#crypto key generate rsa
+The name for the keys will be: S1.netacad.pka
+Choose the size of the key modulus in the range of 360 to 4096 for your
+  General Purpose Keys. Choosing a key modulus greater than 512 may take
+  a few minutes.
+
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+
+S1(config)#username administrator secret cisco
+*Mar 2 13:42:41.930: %SSH-5-ENABLED: SSH 1.99 has been enabled
+S1(config)#line vty 0 15
+S1(config-line)#login local
+S1(config-line)#transport input ssh
+S1(config-line)#no password cisco
+S1(config-line)#exit
+S1(config)#
+S1#
+S1#exit
+
+[Connection to 10.10.10.2 closed by foreign host]
+
+C:\>ssh -l administrator 10.10.10.2
+Password: 
+
+S1>enable
+Password: 
+S1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+S1#
+S1>exit
+[Connection to 10.10.10.2 closed by foreign host]
+
+-------------------------------------------------
+Using the command prompt on PC1, Telnet to S1. The user EXEC and privileged EXEC password is cisco.
+telnet 10.10.10.2
+Save the current configuration so that any mistakes you might make can be reversed by toggling the power for S1.
+Show the current configuration and note that the passwords are in plain text.
+In the global configuration mode, enter the command that encrypts plain text passwords.
+It is generally not safe to use Telnet, because data is transferred in plain text. Therefore, use SSH whenever it is available.
+Configure the domain name to be netacad.pka.
+Secure keys are needed to encrypt the data. Generate the RSA keys using a 1024 key length.
+S1(config)# crypto key generate rsa
+The name for the keys will be: S1.netacad.pka
+Choose the size of the key modulus in the range of 360 to 2048 for your
+General Purpose Keys. Choosing a key modulus greater than 512 may take
+a few minutes.
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+
+Step 2: Create an SSH user and reconfigure the VTY lines for SSH-only access.
+Create an administrator user with cisco as the secret password.
+S1(config)# username administrator secret cisco
+Configure the VTY lines to check the local username database for login credentials and to only allow SSH for remote access. Remove the existing vty line password.
+S1(config)# line vty 0 15
+S1(config-line)# login local
+S1(config-line)# transport input ssh
+S1(config-line)# no password cisco
