@@ -1,0 +1,8 @@
+Configuration Home PC 
+
+
+R1>ssh -l SSHuser 192.168.1.1
+
+Password: 
+
+unauthorized access is prohibited!
