@@ -1,0 +1,184 @@
+Cisco 
+
+- output from terminals
+--------------------------------------------------------------------------
+Mery's connection to FTP from Home to Hospital: 
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ftp 209.165.201.3
+Trying to connect...209.165.201.3
+Connected to 209.165.201.3
+220- Welcome to PT Ftp server
+Username:mary
+331- Username ok, need password
+Password:
+230- Logged in
+(passive mode On)
+ftp>dir
+
+Listing /ftp directory from 209.165.201.3: 
+0   : BankData.txt                                       1553
+1   : asa842-k8.bin                                      5571584
+2   : c1841-advipservicesk9-mz.124-15.T1.bin             33591768
+3   : c1841-ipbase-mz.123-14.T7.bin                      13832032
+4   : c1841-ipbasek9-mz.124-12.bin                       16599160
+5   : c2600-advipservicesk9-mz.124-15.T1.bin             33591768
+6   : c2600-i-mz.122-28.bin                              5571584
+7   : c2600-ipbasek9-mz.124-8.bin                        13169700
+8   : c2800nm-advipservicesk9-mz.124-15.T1.bin           50938004
+9   : c2800nm-advipservicesk9-mz.151-4.M4.bin            33591768
+10  : c2800nm-ipbase-mz.123-14.T7.bin                    5571584
+11  : c2800nm-ipbasek9-mz.124-8.bin                      15522644
+12  : c2950-i6q4l2-mz.121-22.EA4.bin                     3058048
+13  : c2950-i6q4l2-mz.121-22.EA8.bin                     3117390
+14  : c2960-lanbase-mz.122-25.FX.bin                     4414921
+15  : c2960-lanbase-mz.122-25.SEE1.bin                   4670455
+16  : c2960-lanbasek9-mz.150-2.SE4.bin                   4670455
+17  : c3560-advipservicesk9-mz.122-37.SE1.bin            8662192
+18  : pt1000-i-mz.122-28.bin                             5571584
+19  : pt3000-i6q4l2-mz.121-22.EA4.bin                    3117390
+ftp>put newclients.txt
+
+Writing file newclients.txt to 209.165.201.3: 
+File transfer in progress...
+
+[Transfer complete - 644 bytes]
+
+644 bytes copied in 0.308 secs (2090 bytes/sec)
+ftp>dir
+
+Listing /ftp directory from 209.165.201.3: 
+0   : BankData.txt                                       1553
+1   : asa842-k8.bin                                      5571584
+2   : c1841-advipservicesk9-mz.124-15.T1.bin             33591768
+3   : c1841-ipbase-mz.123-14.T7.bin                      13832032
+4   : c1841-ipbasek9-mz.124-12.bin                       16599160
+5   : c2600-advipservicesk9-mz.124-15.T1.bin             33591768
+6   : c2600-i-mz.122-28.bin                              5571584
+7   : c2600-ipbasek9-mz.124-8.bin                        13169700
+8   : c2800nm-advipservicesk9-mz.124-15.T1.bin           50938004
+9   : c2800nm-advipservicesk9-mz.151-4.M4.bin            33591768
+10  : c2800nm-ipbase-mz.123-14.T7.bin                    5571584
+11  : c2800nm-ipbasek9-mz.124-8.bin                      15522644
+12  : c2950-i6q4l2-mz.121-22.EA4.bin                     3058048
+13  : c2950-i6q4l2-mz.121-22.EA8.bin                     3117390
+14  : c2960-lanbase-mz.122-25.FX.bin                     4414921
+15  : c2960-lanbase-mz.122-25.SEE1.bin                   4670455
+16  : c2960-lanbasek9-mz.150-2.SE4.bin                   4670455
+17  : c3560-advipservicesk9-mz.122-37.SE1.bin            8662192
+18  : newclients.txt                                     644
+19  : pt1000-i-mz.122-28.bin                             5571584
+20  : pt3000-i6q4l2-mz.121-22.EA4.bin                    3117390
+ftp>
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Dave's PC connection to enterprise router from Healthcare Branch 
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ftp 209.165.201.3
+Trying to connect...209.165.201.3
+Connected to 209.165.201.3
+220- Welcome to PT Ftp server
+Username:mary
+331- Username ok, need password
+Password:
+230- Logged in
+(passive mode On)
+ftp>dir
+
+Listing /ftp directory from 209.165.201.3: 
+0   : BankData.txt                                       1553
+1   : asa842-k8.bin                                      5571584
+2   : c1841-advipservicesk9-mz.124-15.T1.bin             33591768
+3   : c1841-ipbase-mz.123-14.T7.bin                      13832032
+4   : c1841-ipbasek9-mz.124-12.bin                       16599160
+5   : c2600-advipservicesk9-mz.124-15.T1.bin             33591768
+6   : c2600-i-mz.122-28.bin                              5571584
+7   : c2600-ipbasek9-mz.124-8.bin                        13169700
+8   : c2800nm-advipservicesk9-mz.124-15.T1.bin           50938004
+9   : c2800nm-advipservicesk9-mz.151-4.M4.bin            33591768
+10  : c2800nm-ipbase-mz.123-14.T7.bin                    5571584
+11  : c2800nm-ipbasek9-mz.124-8.bin                      15522644
+12  : c2950-i6q4l2-mz.121-22.EA4.bin                     3058048
+13  : c2950-i6q4l2-mz.121-22.EA8.bin                     3117390
+14  : c2960-lanbase-mz.122-25.FX.bin                     4414921
+15  : c2960-lanbase-mz.122-25.SEE1.bin                   4670455
+16  : c2960-lanbasek9-mz.150-2.SE4.bin                   4670455
+17  : c3560-advipservicesk9-mz.122-37.SE1.bin            8662192
+18  : pt1000-i-mz.122-28.bin                             5571584
+19  : pt3000-i6q4l2-mz.121-22.EA4.bin                    3117390
+ftp>put newclients.txt
+
+Writing file newclients.txt to 209.165.201.3: 
+File transfer in progress...
+
+[Transfer complete - 644 bytes]
+
+644 bytes copied in 0.308 secs (2090 bytes/sec)
+ftp>dir
+
+Listing /ftp directory from 209.165.201.3: 
+0   : BankData.txt                                       1553
+1   : asa842-k8.bin                                      5571584
+2   : c1841-advipservicesk9-mz.124-15.T1.bin             33591768
+3   : c1841-ipbase-mz.123-14.T7.bin                      13832032
+4   : c1841-ipbasek9-mz.124-12.bin                       16599160
+5   : c2600-advipservicesk9-mz.124-15.T1.bin             33591768
+6   : c2600-i-mz.122-28.bin                              5571584
+7   : c2600-ipbasek9-mz.124-8.bin                        13169700
+8   : c2800nm-advipservicesk9-mz.124-15.T1.bin           50938004
+9   : c2800nm-advipservicesk9-mz.151-4.M4.bin            33591768
+10  : c2800nm-ipbase-mz.123-14.T7.bin                    5571584
+11  : c2800nm-ipbasek9-mz.124-8.bin                      15522644
+12  : c2950-i6q4l2-mz.121-22.EA4.bin                     3058048
+13  : c2950-i6q4l2-mz.121-22.EA8.bin                     3117390
+14  : c2960-lanbase-mz.122-25.FX.bin                     4414921
+15  : c2960-lanbase-mz.122-25.SEE1.bin                   4670455
+16  : c2960-lanbasek9-mz.150-2.SE4.bin                   4670455
+17  : c3560-advipservicesk9-mz.122-37.SE1.bin            8662192
+18  : newclients.txt                                     644
+19  : pt1000-i-mz.122-28.bin                             5571584
+20  : pt3000-i6q4l2-mz.121-22.EA4.bin                    3117390
+ftp>
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+SSH from Hospital to enterprise router: 
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 209.165.201.2
+
+Pinging 209.165.201.2 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Reply from 209.165.201.2: bytes=32 time=161ms TTL=253
+Reply from 209.165.201.2: bytes=32 time=138ms TTL=253
+
+Ping statistics for 209.165.201.2:
+    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 138ms, Maximum = 161ms, Average = 149ms
+
+C:\>ssh -l admin 209.165.201.2
+
+Password: 
+HQ_Router#ipconfig
+Translating "ipconfig"...domain server (255.255.255.255)
+% Unknown command or computer name, or unable to find computer address
+
+HQ_Router#ls 
+Translating "ls"...domain server (255.255.255.255)
+% Unknown command or computer name, or unable to find computer address
+
+HQ_Router#show_
+HQ_Router#show
+HQ_Router#help
+Translating "help"...domain server (255.255.255.255)
+% Unknown command or computer name, or unable to find computer address
+
+HQ_Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+HQ_Router(config)#enable secret cisco
+HQ_Router(config)#
+HQ_Router#
+-----------------------------------------------------------------
